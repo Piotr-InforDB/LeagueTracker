@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true">
+  <section class="background-fade" >
+
+<!--    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">-->
+<!--      <ion-refresher-content></ion-refresher-content>-->
+<!--    </ion-refresher>-->
+
+    <!--Player-->
+    <section *ngIf="player" >
+
+      <div class="player-banner" >
+
+        <div>
+          <div class="player-rank" *ngIf="ranks.soloQ" >
+            <img height="50" src="{{ranks.soloQ._icon}}" alt="">
+            <div class="player-rank-tier" >{{ranks.soloQ.rank}} <span class="player-rank-lp" > {{ranks.soloQ.leaguePoints}} LP</span></div>
+          </div>
+        </div>
+
+        <div>
+          <img height="75" class="rounded-circle" src="{{player.icon()}}">
+          <div>{{player.name}}</div>
+        </div>
+
+        <div>
+          <div class="player-rank" *ngIf="ranks.flex" >
+            <img height="50" src="{{ranks.flex._icon}}" alt="">
+            <div class="player-rank-tier" >{{ranks.flex.rank}} <span class="player-rank-lp" > {{ranks.flex.leaguePoints}} LP</span></div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!--Match-->
+    <section *ngIf="player" >
+
+      <div *ngFor="let match of matches" >
+
+        <div class="banner" [ngClass]="match.playerOutcome(player.puuid)" >
+
+          <div class="champion-container" >
+
+            <div class="champion-display">
+              <img class="champion-image" src="{{match.playerChampionIcon(player.puuid)}}" height="100" >
+            </div>
+
+          </div>
+
+          <div class="outcome-container" >
+            <div class="outcome-text" > {{match.playerOutcome(player.puuid)}} </div>
+            <div class="gamemode" >{{match.info.gameMode}}</div>
+            <div class="kda" >
+              <span>{{match.playerKda(player.puuid).kills}}</span>
+              <span> / {{match.playerKda(player.puuid).deaths}}</span>
+              <span> / {{match.playerKda(player.puuid).assists}}</span>
+              <div class="kda-line" ></div>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </section>
+</ion-content>

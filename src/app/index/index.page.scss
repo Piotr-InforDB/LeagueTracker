@@ -1,0 +1,114 @@
+ion-input{
+  --highlight-color: transparent!important;
+  border: 1px solid #dedede!important;
+  border-radius: 2rem;
+
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem 0.25rem 1rem!important;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  --placeholder-color: white;
+  --placeholder-opacity: 0.15;
+}
+
+ion-content{
+  --background: url('/assets/img/background.jpg') center/cover!important;
+}
+.background-fade{
+  min-height: 100%;
+  background: rgba(0,0,0, .65);
+  padding: .25rem;
+}
+
+.action-modal{
+  display: none;
+  width: 100%;
+  height: 0vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #333333;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+.action-modal.active{
+  display: block;
+  height: 95vh;
+  box-shadow: 0 0 1rem 10rem rgba(0, 0, 0, 0.75);
+}
+.action-modal.active .action-modal-close{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5vh;
+}
+
+.input-search{
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  z-index: 9;
+}
+
+.player-splash-container{
+  border-radius: 1rem;
+  margin: 0.75rem 0;
+  box-shadow: .25rem 0 .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+.player-splash-fade{
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0, .2);
+}
+
+.player-name{
+  line-height: 1;
+  font-size: 1.5rem;
+}
+.player-rank{
+  display: flex;
+  align-items: center;
+  margin: -.25rem;
+}
+.player-rank-tier{
+  font-size: 1rem;
+}
+.player-rank-lp{
+  opacity: .5;
+}
+
+.player-mastery{
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  margin: .25rem 0;
+}
+.player-mastery img{
+  border-radius: 100%;
+  margin-right: .25rem;
+}
+.player-mastery-container{
+  /*background: rgba(0, 0, 0, 0.25);*/
+  /*padding: .25rem;*/
+  /*border-radius: 1rem;*/
+  /*box-shadow: 0 0 .25rem .25rem rgba(0, 0, 0, .25);*/
+}

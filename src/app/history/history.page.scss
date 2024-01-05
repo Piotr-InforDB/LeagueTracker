@@ -1,0 +1,77 @@
+ion-content{
+  --background: url('/assets/img/background.jpg') center/cover!important;
+}
+.background-fade{
+  min-height: 100%;
+  background: rgba(0,0,0, .65);
+  padding: .5rem;
+}
+
+.player-banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 .25rem .25rem rgba(0, 0, 0, 0.25), 0 0 .5rem .5rem rgba(0, 0, 0, 0.25);
+}
+.banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 .25rem .25rem rgba(0, 0, 0, 0.25);
+  margin: 1rem 0;
+}
+.banner.Victory{
+  background-color: rgba(2, 52, 2, .65);
+}
+.banner.Defeat{
+  background-color: rgba(135, 5,5, .45);
+}
+
+.outcome-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outcome-text{
+  font-size: 2rem;
+  text-shadow: 0 .25rem .25rem rgba(0, 0, 0, .5);
+  line-height: 2.5rem;
+}
+.gamemode{
+  font-size: .75rem;
+  text-shadow: 0 .25rem .25rem rgba(0, 0, 0, .5);
+}
+.kda{
+  font-size: 1.5rem;
+  text-shadow: 0 .25rem .25rem rgba(0, 0, 0, .5);
+  padding: .5rem 0;
+}
+.kda-line{
+  width: 100%;
+  background-color: white;
+  height: 1px;
+  box-shadow: 0 .25rem .25rem rgba(0, 0, 0, .5);;
+  border-radius: 50rem;
+}
+.banner.Defeat .outcome-text{
+  color: #E80000;
+}
+.banner.Victory .outcome-text{
+  color: #00E809;
+}
+
+.champion-container{
+  display: flex;
+}
+.champion-display{
+  padding: .5rem;
+  background-color: rgba(5, 147, 5, 0.35);
+  border-radius: 50rem 50rem 5rem 5rem;
+}
+.champion-image{
+  border-radius: 50rem;
+}
